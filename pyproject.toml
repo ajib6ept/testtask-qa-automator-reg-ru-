@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "domain-counter"
+version = "0.1.0"
+description = ""
+authors = ["ajib6ept <asAlbert@narod.ru>"]
+packages = [
+    { include = "domain_counter" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+pytest = "^7.1.2"
+mypy = "^0.960"
+black = {version = "^22.3.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+domain-counter = "domain_counter.scripts.domain_counter:main"
