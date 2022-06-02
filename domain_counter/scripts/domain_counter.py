@@ -1,2 +1,5 @@
+from domain_counter.cli import arg_parse
+
+
 def main() -> None:
-    print("111")
+    arg_parse()

@@ -1,12 +1,18 @@
 install:
 	poetry install
 
+build:
+	poetry build
+
+package-install:
+	python3 -m pip install --user dist/*.whl
+
 domain-counter:
-	@poetry run domain-counter
+	poetry run domain-counter
 
 lint:
 	@poetry run flake8 domain_counter tests
-	@poetry run mypy .
+	@poetry run mypy . --ignore-missing-imports
 
 test:
 	@poetry run pytest tests
