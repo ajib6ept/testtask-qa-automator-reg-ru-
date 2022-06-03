@@ -15,4 +15,7 @@ lint:
 	@poetry run mypy . --ignore-missing-imports
 
 test:
-	@poetry run pytest tests
+	poetry run coverage run --source=domain_counter -m pytest tests
+
+test-coverage:
+	poetry run coverage xml
